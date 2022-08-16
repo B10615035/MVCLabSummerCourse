@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  fastapi:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 80:80
+    volumes:
+      - /home/viplab/MVCLabSummerCourse/FastAPI:/code
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
